@@ -1,0 +1,9 @@
+body.dark-section .site-header{color:var(--ink)}
+.film-card{aspect-ratio:4/5;min-height:0}
+.film-card img{position:absolute;inset:0}
+.cover img{height:auto;max-height:none;object-fit:contain}
+.image-grid figure{min-width:0}
+.image-grid img{height:auto;object-fit:contain}
+.image-grid.square-grid img,.square-grid img{aspect-ratio:1;object-fit:cover}
+.image-grid.portrait-grid img,.portrait-grid img{aspect-ratio:3/4;object-fit:cover}
+@media(max-width:900px){.film-card{aspect-ratio:16/11}.hero h1{max-width:340px;font-size:clamp(40px,12vw,48px);line-height:1.02}.hero p{max-width:330px}.hero-actions{flex-wrap:wrap}}
