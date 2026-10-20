@@ -1,4 +1,10 @@
 body.dark-section .site-header{color:var(--ink)}
+.project-media,.hero-media,.cover,.image-wide,.image-grid figure,.showcase,.vertical-video-card{background:#e8e3da}
+.hero-media,.film-card{background:#171512}
+img.media-pending{opacity:0}
+img.media-ready{opacity:1;transition:opacity .48s ease}
+img.media-error{opacity:1}
+@media(prefers-reduced-motion:reduce){img.media-ready{transition:none}}
 .brand,.nav-links a,.text-link,.btn,.project-card,.film-card,.project-nav a,.vertical-video-card{transition:color .45s ease,background-color .45s ease,border-color .45s ease,box-shadow .55s ease,transform .55s cubic-bezier(.2,.7,.2,1),opacity .45s ease}
 .project-media img,.film-card img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease}
 .project-media{aspect-ratio:auto;background:transparent}
