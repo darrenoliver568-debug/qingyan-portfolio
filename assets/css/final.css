@@ -1,9 +1,50 @@
 body.dark-section .site-header{color:var(--ink)}
-.film-card{aspect-ratio:4/5;min-height:0}
+.brand,.nav-links a,.text-link,.btn,.project-card,.film-card,.project-nav a,.vertical-video-card{transition:color .45s ease,background-color .45s ease,border-color .45s ease,box-shadow .55s ease,transform .55s cubic-bezier(.2,.7,.2,1),opacity .45s ease}
+.project-media img,.film-card img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease}
+.project-card:hover .project-media{box-shadow:0 22px 60px rgba(38,30,19,.14)}
+.project-card:hover .project-media img,.film-card:hover img{transform:scale(1.018);filter:brightness(1.045)}
+.project-card:hover h3,.text-link:hover,.nav-links a:hover{color:var(--red)}
+.text-link{position:relative;display:inline-flex;gap:8px;padding-bottom:5px}
+.text-link:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .45s ease}
+.text-link:hover{transform:translateX(3px)}
+.text-link:hover:after{transform:scaleX(1)}
+.nav-links a{position:relative}
+.nav-links a:after{content:"";position:absolute;left:50%;bottom:-10px;width:4px;height:4px;border-radius:50%;background:var(--red);transform:translateX(-50%) scale(0);transition:transform .35s ease}
+.nav-links a:hover:after,.nav-links a[aria-current=page]:after{transform:translateX(-50%) scale(1)}
+.btn:hover{opacity:1;transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,0,0,.12)}
+.film-card{aspect-ratio:4/5;min-height:0;border-radius:4px}
 .film-card img{position:absolute;inset:0}
+.film-copy p{margin:8px 0 0;max-width:390px;color:#ddd;font-size:13px;line-height:1.55}
+.film-copy small{display:block;margin-top:10px;color:#dcc4a6;font-size:11px;line-height:1.45}
+.film-card:hover .film-copy{transform:translateY(-3px)}
+.film-copy{transition:transform .5s ease}
+.section-action{margin-top:32px}
+.films-list{padding-top:0}
+.films-list .film-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.films-list .film-card{aspect-ratio:16/10}
 .cover img{height:auto;max-height:none;object-fit:contain}
 .image-grid figure{min-width:0}
 .image-grid img{height:auto;object-fit:contain}
 .image-grid.square-grid img,.square-grid img{aspect-ratio:1;object-fit:cover}
 .image-grid.portrait-grid img,.portrait-grid img{aspect-ratio:3/4;object-fit:cover}
-@media(max-width:900px){.film-card{aspect-ratio:16/11}.hero h1{max-width:340px;font-size:clamp(40px,12vw,48px);line-height:1.02}.hero p{max-width:330px}.hero-actions{flex-wrap:wrap}}
+.award-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.award-list span{padding:9px 13px;border:1px solid var(--line);border-radius:999px;color:#5f574d;font-size:12px;background:rgba(255,255,255,.45)}
+.project-summary{max-width:780px;margin:0;font:500 clamp(24px,3vw,40px)/1.45 var(--serif)}
+.drama-feature{background:#ece6dc}
+.drama-layout{display:grid;grid-template-columns:minmax(260px,380px) minmax(0,1fr);gap:clamp(48px,8vw,120px);align-items:center}
+.vertical-video-card{position:relative;width:100%;max-width:360px;aspect-ratio:9/16;margin:auto;border-radius:24px;overflow:hidden;background:#171512;box-shadow:0 24px 70px rgba(44,35,24,.17)}
+.vertical-video-card:hover{transform:translateY(-5px);box-shadow:0 32px 86px rgba(44,35,24,.24)}
+.vertical-video-card video{width:100%;height:100%;object-fit:cover;background:#e6dfd4}
+.play-cue{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);padding:9px 15px;border-radius:999px;background:rgba(246,242,234,.82);backdrop-filter:blur(12px);color:#332d27;font-size:12px;white-space:nowrap;pointer-events:none;opacity:.72;transition:opacity .4s ease,transform .4s ease}
+.vertical-video-card:hover .play-cue{opacity:1;transform:translateX(-50%) translateY(-3px)}
+.vertical-video-card.is-playing .play-cue{opacity:0}
+.drama-copy h2{margin:0 0 26px;font:500 clamp(38px,5vw,68px)/1.05 var(--serif)}
+.drama-copy p{max-width:680px;color:var(--muted);font-size:16px}
+.compact-steps{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.compact-steps span{padding:8px 13px;border-radius:999px;background:#eee8de;color:#5f574e;font-size:12px}
+.drama-detail{max-width:1180px}
+.about-teaser p{max-width:760px;color:var(--muted);font-size:17px}
+.project-nav a:hover{background:#ebe6dc}
+.project-nav a:first-child:hover{transform:translateX(-3px)}
+.project-nav a:last-child:hover{transform:translateX(3px)}
+@media(max-width:900px){.film-card{aspect-ratio:16/11}.films-list .film-grid{grid-template-columns:1fr}.films-list .film-card{aspect-ratio:16/11}.hero h1{max-width:340px;font-size:clamp(40px,12vw,48px);line-height:1.02}.hero p{max-width:330px}.hero-actions{flex-wrap:wrap}.drama-layout{grid-template-columns:1fr;gap:44px}.vertical-video-card{max-width:300px;border-radius:20px}.drama-copy{text-align:left}.award-list{display:grid}.film-copy p{font-size:12px}}
