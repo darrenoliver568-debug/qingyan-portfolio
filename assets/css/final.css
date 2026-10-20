@@ -1,6 +1,8 @@
 body.dark-section .site-header{color:var(--ink)}
 .project-media,.cover,.image-wide,.image-grid figure,.showcase,.vertical-video-card{background:#e8e3da}
 .hero-media,.film-card{background:#171512}
+.video-wrap video{width:100%;height:auto;max-height:none;aspect-ratio:16/9;object-fit:contain}
+.showcase{background:transparent}
 .brand,.nav-links a,.text-link,.btn,.project-card,.film-card,.project-nav a,.vertical-video-card{transition:color .45s ease,background-color .45s ease,border-color .45s ease,box-shadow .55s ease,transform .55s cubic-bezier(.2,.7,.2,1),opacity .45s ease}
 .project-media img,.film-card img{transition:transform .7s cubic-bezier(.2,.7,.2,1),filter .7s ease}
 .project-media{aspect-ratio:auto;background:transparent}
@@ -112,6 +114,7 @@ p,.page-lead,.section-intro,.film-copy small{line-break:strict;text-wrap:pretty;
   .film-card{min-height:0}.project-nav a{padding:26px 20px}
 }
 @media(max-width:420px){
+  .hero p{text-shadow:0 1px 10px rgba(0,0,0,.58)}
   .hero h1{max-width:7.5em;font-size:clamp(40px,12vw,48px);line-height:1.08;letter-spacing:-.02em}.hero p{line-height:1.8;text-wrap:pretty}
   .page-meta{gap:9px 18px}.image-grid,.image-grid.three{grid-template-columns:1fr}
 }
