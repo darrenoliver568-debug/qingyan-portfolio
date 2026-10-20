@@ -34,7 +34,8 @@ body.dark-section .site-header{color:var(--ink)}
 .drama-layout{display:grid;grid-template-columns:minmax(260px,380px) minmax(0,1fr);gap:clamp(48px,8vw,120px);align-items:center}
 .vertical-video-card{position:relative;width:100%;max-width:360px;aspect-ratio:9/16;margin:auto;border-radius:24px;overflow:hidden;background:#171512;box-shadow:0 24px 70px rgba(44,35,24,.17)}
 .vertical-video-card:hover{transform:translateY(-5px);box-shadow:0 32px 86px rgba(44,35,24,.24)}
-.vertical-video-card video{width:100%;height:100%;object-fit:cover;background:#e6dfd4}
+.vertical-video-card video{width:100%;height:100%;object-fit:cover;background:#e6dfd4;cursor:pointer}
+.vertical-video-card video:focus-visible{outline:2px solid #a6322b;outline-offset:-5px}
 .play-cue{position:absolute;left:50%;bottom:24px;transform:translateX(-50%);padding:9px 15px;border-radius:999px;background:rgba(246,242,234,.82);backdrop-filter:blur(12px);color:#332d27;font-size:12px;white-space:nowrap;pointer-events:none;opacity:.72;transition:opacity .4s ease,transform .4s ease}
 .vertical-video-card:hover .play-cue{opacity:1;transform:translateX(-50%) translateY(-3px)}
 .vertical-video-card.is-playing .play-cue{opacity:0}
