@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded',()=>{
   const base='https://github.com/darrenoliver568-debug/qingyan-portfolio/releases/download/v1-assets/';
   document.querySelectorAll('video source[src^="assets/video/"]').forEach(source=>{source.src=base+source.getAttribute('src').split('/').pop();source.parentElement.load()});
   document.querySelectorAll('video').forEach(v=>{v.addEventListener('playing',()=>v.closest('.vertical-video-card')?.classList.add('is-playing'));v.addEventListener('pause',()=>v.closest('.vertical-video-card')?.classList.remove('is-playing'));v.addEventListener('error',()=>v.parentElement.querySelector('.error-message')?.classList.add('show'))});
-  const swaps=[['NESCAFÉ','雀巢十五倍浓缩咖啡'],['Concept project · mock interface','商业视觉项目 · 界面模拟'],['Concept project','商业视觉项目'],['mock interface','界面模拟'],['AIGC Commercial Visual & Motion Portfolio','商业视觉作品集'],['AI 短剧生产实践','漫剧制作经历'],['AI 短剧','漫剧']];
+  const swaps=[['NESCAFÉ','雀巢十五倍浓缩咖啡'],['AIGC Commercial Visual & Motion Portfolio','商业视觉作品集'],['AI 短剧生产实践','漫剧制作经历'],['AI 短剧','漫剧']];
   document.querySelectorAll('h1,h2,h3,p,span,strong,small').forEach(el=>{swaps.forEach(([from,to])=>{if(el.textContent.trim()===from)el.textContent=to})});
   document.querySelectorAll('.project-nav strong').forEach(el=>{el.textContent=el.textContent.replace('ILLY','意利咖啡').replace('NESCAFÉ','雀巢十五倍浓缩咖啡')});
   const footerLead=document.querySelector('.footer-inner>span:first-child');if(footerLead)footerLead.textContent='© '+new Date().getFullYear()+' 朱青';
